@@ -18,11 +18,11 @@ class Toy {
         Toy toy2 = new Toy(2, "конструктор", 2);
         Toy toy3 = new Toy(3, "кукла", 6);
 
-        // Fill arrays with ids and weights
+        // Заполнить массивы идентификаторами и весами
         int[] ids = {toy1.id, toy2.id, toy3.id};
         int[] weights = {toy1.weight, toy2.weight, toy3.weight};
 
-        // Create PriorityQueue and add elements
+        //  Создать PriorityQueue и добавить элементы
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         for (int i = 0; i < ids.length; i++) {
             for (int j = 0; j < weights[i]; j++) {
@@ -30,7 +30,7 @@ class Toy {
             }
         }
 
-        // Get values 10 times and write to file
+        // Получаем значения 10 раз и записываем в файл
         try (FileWriter writer = new FileWriter("output.txt")) {
             for (int i = 0; i < 10; i++) {
                 int random = (int) (Math.random() * 100);
